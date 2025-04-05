@@ -52,8 +52,10 @@ def generate_timetable():
         dict: A data structure representing the complete timetable
               Format: {day: {period: {class: (subject, teacher)}}}
     """
+    
     # Initialize an empty timetable
     timetable = {day: {period: {} for period in range(1, periods_per_day + 1)} for day in days_of_week}
+    
     
     # TODO: Implement the timetable generation algorithm
     # 1. Check if a valid timetable is possible with the given constraints
@@ -64,12 +66,14 @@ def generate_timetable():
 
 
 def display_timetable(timetable):
+    
     """
     Display the generated timetable in a readable format.
     
     Args:
         timetable (dict): The generated timetable
     """
+    
     # TODO: Implement timetable display logic
     # Display the timetable for each class
     # Display the timetable for each teacher
@@ -116,3 +120,31 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+''' it can be by using suduko solver concept
+like two classes can't have for same subject as well as same teacher at a time.class can have same subjet 
+but different teacher so that there can't be coincide with others.
+
+'''             sub1                sub2                    sub3        sub4        sub5        sub6
+    class 6a    english(joshi)      science(gupta)  
+    class 6b    maths (sharma)      com sci(malhotra)    
+    class 7a    social(singh)       english(patel)       maths (sharma) 
+    class 7b    phy edu(chauhan)    maths(kumar)         english(joshi)
+'''
+'''
+we need to assign a teacher unique for 1st row (i.e in 1st period) so that it can't be coincide with other classes
+subject can be same but we can't assign same teacher at a time for 1st period we need to repeat same for 5 days 
+with out coincide 
+
+'''
+
+
+
+
+
+
+
+
+
+
+
